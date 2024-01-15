@@ -1,0 +1,41 @@
+.contaier {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  position: relative;
+}
+.main-header,
+.main-footer {
+  width: 100%;
+  height: 50px;
+  padding: 0.7rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  z-index: 10;
+}
+.main-header {
+  top: 0;
+  left: 0;
+  background: #000;
+}
+.main-footer {
+  bottom: 0;
+  left: 0;
+  background: black;
+}
+.main-container {
+  min-height: 100vh;
+  padding-block: 50px;
+
+  overflow: hidden;
+  max-width: 360px;
+}
+.main-container::-webkit-scrollbar {
+  width: 5px;
+  height: 8px;
+  scrollbar-width: 15px;
+
+  background-color: transparent; /* or add it to the track */
+}

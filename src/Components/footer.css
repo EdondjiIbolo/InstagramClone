@@ -1,0 +1,19 @@
+.footer-list {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.footer__item {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.footer__link {
+  padding: 5px;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}

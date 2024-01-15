@@ -1,0 +1,27 @@
+.header-list {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.notifications {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  align-items: center;
+}
+.header__item {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.header__link {
+  padding: 5px;
+  list-style-type: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
