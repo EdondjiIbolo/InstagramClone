@@ -7,6 +7,7 @@ export function MediaPlayer() {
       <header className="feed__header">
         <section className="feed__user">
           <picture className="header__img">
+            <div className="gradient"></div>
             <img src={imgFeed} alt="Profile img" />
           </picture>
           <div>

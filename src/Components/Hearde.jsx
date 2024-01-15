@@ -1,4 +1,4 @@
-import { HeartIcon, InstagramLogo, MessageIcon } from "./Iconos";
+import { ArrowIcon, HeartIcon, InstagramLogo, MessageIcon } from "./Iconos";
 import "./header.css";
 export function Header() {
   return (
@@ -8,6 +8,7 @@ export function Header() {
           <li className="header__item">
             <a href="#" className="header__link">
               <InstagramLogo />
+              <ArrowIcon />
             </a>
           </li>
           <section className="notifications">
