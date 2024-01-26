@@ -27,12 +27,14 @@ body {
   margin: 0;
   padding: 0;
   display: grid;
-
+  color: #fff;
   min-width: 320px;
   max-width: 100%;
   min-height: 100vh;
 }
-
+a {
+  color: #fff;
+}
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
