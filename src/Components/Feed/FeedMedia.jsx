@@ -43,8 +43,15 @@ export function MediaPlayer() {
           <div className="description__post">
             <span className="feed__user-description">
               <strong> mister_calderia </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit
+              Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem,
+              ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit
+              amet consectetur adipisicing elit. ipsum dolor sit amet
+              consectetur adipisicing elit. ipsum dolor sit amet consectetur
+              adipisicing elit.
             </span>
+          </div>
+          <div>
+            <span>Hace un dia</span>
           </div>
         </div>
       </section>
