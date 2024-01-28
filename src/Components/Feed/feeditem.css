@@ -8,6 +8,12 @@
   justify-content: space-between;
   align-items: center;
 }
+.player__item {
+  height: 100vw;
+}
+.player__item > img {
+  object-fit: cover;
+}
 .feed-footer__list-left {
   display: flex;
   flex-direction: row;
@@ -51,9 +57,42 @@
   height: 90%;
   border-radius: 50%;
 }
+.feed-detail {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.feed__time {
+  display: flex;
+  gap: 10px;
+  color: gray;
+  align-items: center;
+}
+.text-white {
+  color: #fff;
+}
+.circle {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  border-radius: 100%;
+  background: gray;
+  display: flex;
+}
+.feed__time--text {
+  color: gray;
+}
 .description__post {
   /* Todo */
+
+  height: 25px;
+  overflow: hidden;
+}
+.description__post-overflow {
   text-wrap: wrap;
   text-overflow: ellipsis;
-  height: 45px;
+}
+.feed__user-description {
+  display: flex;
+  gap: 8px;
 }

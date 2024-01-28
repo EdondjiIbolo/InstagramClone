@@ -2,6 +2,12 @@ import imgFeed from "../../assets/imgclonIg.jpg";
 import { ComentIcon, DotIcon, HeartIcon, SaveIcon, ShareIcon } from "../Iconos";
 import "./feeditem.css";
 export function MediaPlayer() {
+  const text = "Lorem ipsum dolor sit ametcon";
+  const textLenght = text.length;
+  const className =
+    textLenght > 25
+      ? "description__post description__post-overflow "
+      : "description__post";
   return (
     <section className="feed">
       <header className="feed__header">
@@ -18,7 +24,7 @@ export function MediaPlayer() {
           <DotIcon />
         </div>
       </header>
-      <div className="palyer__item">
+      <div className="player__item">
         <img src={imgFeed} alt="feed item" />
       </div>
       <footer className="feed-footer">
@@ -40,19 +46,21 @@ export function MediaPlayer() {
       <section className="feed-detail">
         <span className="feed__likes">1230 Me gusta</span>
         <div className="feed__description">
-          <div className="description__post">
+          <div className={className}>
             <span className="feed__user-description">
               <strong> mister_calderia </strong>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit Lorem,
-              ipsum dolor sit amet consectetur adipisicing elit. ipsum dolor sit
-              amet consectetur adipisicing elit. ipsum dolor sit amet
-              consectetur adipisicing elit. ipsum dolor sit amet consectetur
-              adipisicing elit.
+              {textLenght > 25 ? `${text.slice(0, 15)}...` : text}
+              {textLenght > 25 && <span className="feed__time">Ver mas</span>}
             </span>
           </div>
-          <div>
-            <span>Hace un dia</span>
-          </div>
+        </div>
+        <div>
+          <span className="feed__time">Ver los 3 comentarios</span>
+        </div>
+        <div className="feed__time">
+          <span className="feed__time--text">Hace un dia </span>
+          <div className="circle"></div>
+          <span className="text-white">Ver traduccion</span>
         </div>
       </section>
     </section>
