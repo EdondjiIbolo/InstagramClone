@@ -18,19 +18,9 @@ export function MediaPlayer() {
   }, [textLenght]);
 
   const handleClick = () => {
-    if (click) {
-      setText(initialText);
-      console.log(initialText);
-      setMyClass(`${MyClass} description__post--show`);
-
-      setClick(false);
-    } else {
-      setText(`${text.slice(0, 15)}...`);
-      console.log(initialText);
-      setMyClass(`${MyClass}`);
-
-      setClick(true);
-    }
+    setText(initialText);
+    console.log(initialText);
+    setMyClass(`${MyClass} description__post--show`);
   };
   return (
     <section className="feed">
@@ -76,7 +66,7 @@ export function MediaPlayer() {
               {text}
               {textLenght > 25 && (
                 <span className="text-grey" onClick={handleClick}>
-                  Ver {click ? "mas" : "menos"}
+                  Ver mas
                 </span>
               )}
             </span>

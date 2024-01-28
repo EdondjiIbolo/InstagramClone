@@ -87,7 +87,7 @@
 
   height: min-content;
   overflow: hidden;
-  transition: all ease 450ms;
+  transition: all ease 550ms;
 }
 .description__post--show {
   height: min-content;
