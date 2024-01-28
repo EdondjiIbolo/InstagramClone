@@ -85,14 +85,23 @@
 .description__post {
   /* Todo */
 
-  height: 25px;
+  height: min-content;
   overflow: hidden;
+  transition: all ease 450ms;
+}
+.description__post--show {
+  height: min-content;
+  padding-bottom: 5px;
 }
 .description__post-overflow {
   text-wrap: wrap;
   text-overflow: ellipsis;
 }
-.feed__user-description {
+.text-grey {
+  color: gray;
+  margin-left: 2.5px;
+}
+/* .feed__user-description {
   display: flex;
   gap: 8px;
-}
+} */

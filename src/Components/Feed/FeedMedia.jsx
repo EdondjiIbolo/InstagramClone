@@ -1,13 +1,37 @@
+import { useEffect, useState } from "react";
 import imgFeed from "../../assets/imgclonIg.jpg";
 import { ComentIcon, DotIcon, HeartIcon, SaveIcon, ShareIcon } from "../Iconos";
 import "./feeditem.css";
 export function MediaPlayer() {
-  const text = "Lorem ipsum dolor sit ametcon";
-  const textLenght = text.length;
-  const className =
-    textLenght > 25
-      ? "description__post description__post-overflow "
-      : "description__post";
+  const [MyClass, setMyClass] = useState("description__post");
+  const [click, setClick] = useState(false);
+  const initialText =
+    "La vida es como un lienzo en blanco, depende de ti cómo llenarlo de colores y emociones.  ¡Sé valiente, sé auténtico y aprovecha cada oportunidad que se te presente!";
+  const [text, setText] = useState(initialText);
+  const textLenght = initialText.length;
+
+  useEffect(() => {
+    if (textLenght > 25) {
+      setMyClass("description__post description__post-overflow ");
+      setText(`${text.slice(0, 15)}...`);
+    }
+  }, [textLenght]);
+
+  const handleClick = () => {
+    if (click) {
+      setText(initialText);
+      console.log(initialText);
+      setMyClass(`${MyClass} description__post--show`);
+
+      setClick(false);
+    } else {
+      setText(`${text.slice(0, 15)}...`);
+      console.log(initialText);
+      setMyClass(`${MyClass}`);
+
+      setClick(true);
+    }
+  };
   return (
     <section className="feed">
       <header className="feed__header">
@@ -46,11 +70,15 @@ export function MediaPlayer() {
       <section className="feed-detail">
         <span className="feed__likes">1230 Me gusta</span>
         <div className="feed__description">
-          <div className={className}>
+          <div className={MyClass}>
             <span className="feed__user-description">
               <strong> mister_calderia </strong>
-              {textLenght > 25 ? `${text.slice(0, 15)}...` : text}
-              {textLenght > 25 && <span className="feed__time">Ver mas</span>}
+              {text}
+              {textLenght > 25 && (
+                <span className="text-grey" onClick={handleClick}>
+                  Ver {click ? "mas" : "menos"}
+                </span>
+              )}
             </span>
           </div>
         </div>
